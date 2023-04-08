@@ -1,0 +1,16 @@
+﻿@media (min-width: 960px) {
+  html{
+    background-size: cover;
+    background-image: url("../../assets/background_desktop.webp");
+
+    body{
+      app-root{
+        &>:not(app-navbar, router-outlet) {
+          gap: 64px;
+          padding-inline: 256px;
+          padding-block: 64px;
+        }
+      }
+    }
+  }
+}

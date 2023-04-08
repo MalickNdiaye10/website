@@ -1,1 +1,115 @@
-/* You can add global styles to this file, and also import other style files */
+@media (min-width: 960px) {
+  html {
+    background-size: cover;
+    background-image: url("../../assets/background_desktop.webp"); }
+    html body app-root > :not(app-navbar, router-outlet) {
+      gap: 64px;
+      padding-inline: 256px;
+      padding-block: 64px; } }
+@media (max-width: 600px) {
+  html {
+    background-size: cover;
+    background-image: url("../../assets/background_mobile.webp"); } }
+html {
+  font-family: Montserrat, sans-serif;
+  font-size: 62.5%; }
+  html a, html p {
+    color: #e6e6e6;
+    font-size: 1.6em; }
+  html h2, html .h2 {
+    font-size: 1.92em; }
+  html h1, html .h1 {
+    font-size: 2.3em; }
+  html h1, html h2 {
+    color: #ccffff; }
+  html a {
+    text-decoration: none;
+    color: #ffdfcc; }
+    html a:hover {
+      opacity: 0.8;
+      cursor: pointer; }
+    html a:active {
+      opacity: 0.6; }
+    html a.current {
+      color: #ccffff; }
+  html .regular {
+    font-weight: 400; }
+  html .light {
+    font-weight: 200; }
+  html .bold {
+    font-weight: 600; }
+  html p, html a, html h1, html h2 {
+    margin: unset;
+    text-align: justify; }
+
+html {
+  display: flex;
+  min-height: 100%;
+  width: 100%; }
+  html .bg-blur {
+    backdrop-filter: blur(12px); }
+  html body {
+    background-color: rgba(26, 26, 26, 0.5);
+    margin: 0;
+    min-height: 100%;
+    width: 100%; }
+    html body app-root {
+      display: flex;
+      flex-direction: column; }
+      html body app-root > :not(app-navbar, router-outlet) {
+        display: flex;
+        flex-direction: column; }
+      html body app-root app-navbar {
+        border-left: 0 !important;
+        border-right: 0 !important;
+        border-top: 0 !important;
+        border-radius: 0 0 8px 8px !important;
+        display: flex;
+        justify-content: space-evenly;
+        padding-block: 16px;
+        width: 100%; }
+      html body app-root .border {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 8px; }
+      html body app-root .surface2 {
+        background-color: rgba(51, 51, 51, 0.5); }
+      html body app-root .surface3 {
+        background-color: rgba(77, 77, 77, 0.5); }
+      html body app-root .title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px; }
+      html body app-root .card {
+        display: flex;
+        gap: 32px;
+        padding: 32px; }
+        html body app-root .card.reverse {
+          flex-direction: row-reverse; }
+        html body app-root .card img {
+          height: 192px;
+          width: 192px; }
+        html body app-root .card div {
+          display: flex;
+          flex-direction: column;
+          gap: 16px; }
+      html body app-root .list-container {
+        display: flex;
+        gap: 32px;
+        justify-content: space-between;
+        width: 100%; }
+        html body app-root .list-container .list {
+          display: flex;
+          flex-direction: column;
+          gap: 32px;
+          padding: 32px;
+          width: 100%; }
+          html body app-root .list-container .list div {
+            align-items: center;
+            display: flex;
+            gap: 16px; }
+            html body app-root .list-container .list div img {
+              height: 48px;
+              width: 48px; }
+
+/*# sourceMappingURL=styles.css.map */
