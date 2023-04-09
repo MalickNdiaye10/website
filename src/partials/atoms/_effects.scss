@@ -1,0 +1,18 @@
+﻿@import "colors";
+
+.bg-blur{
+  backdrop-filter: blur(12px);
+}
+
+.border{
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+}
+
+.surface2{
+  background-color: $surface-2;
+}
+
+.surface3{
+  background-color: $surface-3;
+}

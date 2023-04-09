@@ -1,0 +1,46 @@
+﻿.card{
+  display: flex;
+  gap: 32px;
+  padding: 32px;
+
+  &.reverse{
+    flex-direction: row-reverse;
+  }
+
+  img{
+    height: 192px;
+    width: 192px;
+  }
+
+  div{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+.list-container{
+  display: flex;
+  gap: 32px;
+  justify-content: space-between;
+  width: 100%;
+
+  .list{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 32px;
+    width: 100%;
+
+    div{
+      align-items: center;
+      display: flex;
+      gap: 16px;
+
+      img{
+        height: 48px;
+        width: 48px;
+      }
+    }
+  }
+}

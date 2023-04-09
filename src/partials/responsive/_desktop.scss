@@ -7,7 +7,7 @@
       app-root{
         &>:not(app-navbar, router-outlet) {
           gap: 64px;
-          padding-inline: 256px;
+          padding-inline: 512px;
           padding-block: 64px;
         }
       }
