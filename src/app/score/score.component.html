@@ -1,0 +1,9 @@
+<div class="surface3 border">
+  <div id="score-texts">
+    <p>Score: </p>
+    <p>{{currentScore}} / {{maxScore}}</p>
+  </div>
+  <div id="score-bg">
+    <div [ngClass]="{'full' : currentScore == maxScore}" id="score-bar"></div>
+  </div>
+</div>

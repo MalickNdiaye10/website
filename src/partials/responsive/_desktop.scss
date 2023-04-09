@@ -1,14 +1,15 @@
 ﻿@media (min-width: 960px) {
   html{
-    background-size: cover;
+    background-attachment: fixed;
     background-image: url("../../assets/background_desktop.webp");
+    background-size: cover;
 
     body{
       app-root{
-        &>:not(app-navbar, router-outlet) {
+        &>:not(app-navbar, app-score, router-outlet) {
           gap: 64px;
-          padding-inline: 512px;
           padding-block: 64px;
+          width: 896px;
         }
       }
     }

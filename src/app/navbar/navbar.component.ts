@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ScoreService} from "../../services/score.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +9,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  public maxedOut: boolean = false;
+  public scoredComp: boolean = false;
+  public scoredRea: boolean = false;
+  public scoredExp: boolean = false;
+
+  constructor(private scoreService: ScoreService, private router: Router) { }
 
   ngOnInit(): void {
+    this.scoreService.currentScore.subscribe((value) => {
+      this.maxedOut = value == this.scoreService.max;
+    })
   }
+
+  Score(target: string): void{
+    if (target == "comp"){
+      if (this.scoredComp) return;
+      this.scoredComp = true;
+    } else if (target == 'rea'){
+      if (this.scoredRea) return;
+      this.scoredRea = true;
+    } else if (target == 'exp'){
+      if (this.scoredExp) return;
+      this.scoredExp = true;
+    }
+    this.scoreService.addScore();
+  }
+
 
 }

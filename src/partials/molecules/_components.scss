@@ -1,10 +1,62 @@
-﻿app-navbar{
+﻿@import "../atoms/colors";
+
+app-navbar, app-score > div, #score-bg, #score-bar.full{
+  border-radius: 0 0 8px 0 !important;
+}
+
+app-navbar, app-score{
+  position: sticky;
+  z-index: 1;
+}
+
+app-navbar{
   border-left: 0 !important;
   border-right: 0 !important;
   border-top: 0 !important;
-  border-radius: 0 0 8px 8px !important;
-  display: flex;
-  justify-content: space-evenly;
   padding-block: 16px;
+  top: 0;
   width: 100%;
+
+  & > div{
+    display: flex;
+    justify-content: space-evenly;
+    padding-inline: 128px;
+  }
+}
+
+app-score{
+  display: flex;
+  padding: 0;
+  top: 52px;
+  width: 100%;
+
+  & > div{
+    border-bottom: 0 !important;
+    border-left: 0 !important;
+    border-top: 0 !important;
+    display: flex;
+    flex-direction: column;
+    width: 256px;
+
+    #score-texts{
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      padding-block: 10px;
+    }
+
+    #score-bg, #score-bar{
+      height: 8px;
+    }
+
+    #score-bg{
+      background-color: $neutral-9;
+    }
+
+    #score-bar{
+      background-color: $primary-4;
+      transition: 0.5s linear;
+      width: 64px;
+    }
+  }
 }

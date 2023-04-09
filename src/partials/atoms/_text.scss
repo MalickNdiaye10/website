@@ -14,11 +14,11 @@ html {
     font-size: 2.3em;
   }
   h1,h2{
-    color: $primary-9;
+    color: $primary-8;
   }
   a{
     text-decoration: none;
-    color: $secondary-9;
+    color: $secondary-8;
     &:hover{
       opacity: 0.8;
       cursor: pointer;
@@ -27,8 +27,13 @@ html {
       opacity: 0.6;
     }
     &.current{
-      color: $primary-9;
+      color: $primary-8;
+      pointer-events: none;
     }
+  }
+  p, a, h1, h2{
+    margin: unset;
+    text-align: justify;
   }
   .regular{
     font-weight: 400;
@@ -39,14 +44,34 @@ html {
   .bold{
     font-weight: 600;
   }
-  p, a, h1, h2{
-    margin: unset;
-    text-align: justify;
-  }
   .title{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 8px;
   }
+  .locked{
+    color: $secondary-8 !important;
+    opacity: 0.6;
+    pointer-events: all !important;
+  }
+  .tooltip{
+    position: relative;
+
+    .tooltip-text{
+      font-size: 16px;
+      left: calc(100% + 16px);
+      padding-block: 8px;
+      padding-inline: 16px;
+      position: absolute;
+      text-align: center;
+      visibility: hidden;
+      z-index: 2;
+    }
+
+    &:hover .tooltip-text{
+      visibility: visible;
+    }
+  }
+
 }

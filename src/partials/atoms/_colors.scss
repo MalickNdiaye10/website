@@ -1,13 +1,13 @@
 ﻿//Neutrals
-$neutral-1: hsl(0, 0%, 10%);
-$neutral-2: hsl(0, 0%, 20%);
-$neutral-3: hsl(0, 0%, 30%);
-$neutral-4: hsl(0, 0%, 40%);
-$neutral-5: hsl(0, 0%, 50%);
-$neutral-6: hsl(0, 0%, 60%);
-$neutral-7: hsl(0, 0%, 70%);
-$neutral-8: hsl(0, 0%, 80%);
-$neutral-9: hsl(0, 0%, 90%);
+$neutral-1: hsl(180, 10%, 10%);
+$neutral-2: hsl(180, 10%, 20%);
+$neutral-3: hsl(180, 10%, 30%);
+$neutral-4: hsl(180, 10%, 40%);
+$neutral-5: hsl(180, 10%, 50%);
+$neutral-6: hsl(180, 10%, 60%);
+$neutral-7: hsl(180, 10%, 70%);
+$neutral-8: hsl(180, 10%, 80%);
+$neutral-9: hsl(180, 10%, 90%);
 
 //Primary
 $primary-1: hsl(180, 100%, 10%);
@@ -32,6 +32,7 @@ $secondary-8: hsl(22, 100%, 80%);
 $secondary-9: hsl(22, 100%, 90%);
 
 //Surface
-$surface-1: hsla(0, 0%, 10%, 0.5);
-$surface-2: hsla(0, 0%, 20%, 0.5);
-$surface-3: hsla(0, 0%, 30%, 0.5);
+$surface-1: hsla(180, 10%, 10%, 0.5);
+$surface-2: hsla(180, 10%, 10%, 0.5);
+$surface-3: hsla(180, 10%, 20%, 0.9);
+$surface-4: hsla(180, 10%, 20%, 1);

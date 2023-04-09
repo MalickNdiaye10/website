@@ -21,12 +21,17 @@ html{
     width: 100%;
 
     app-root{
+      align-items: center;
       display: flex;
       flex-direction: column;
 
-      &>:not(app-navbar, router-outlet){
+      &>:not(app-navbar, app-score, router-outlet){
         display: flex;
         flex-direction: column;
+      }
+
+      .hide{
+        display: none;
       }
     }
   }

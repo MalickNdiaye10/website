@@ -1,9 +1,15 @@
-<a routerLink="" routerLinkActive="current" [routerLinkActiveOptions]="{exact: true}">
-  Malick Ndiaye
-</a>
-<a routerLink="competences" routerLinkActive="current">
-  Compétences
-</a>
-<a>Réalisations</a>
-<a>Expériences</a>
-<a style="display: none">Contact</a>
+<div>
+  <a routerLink="" routerLinkActive="current" [routerLinkActiveOptions]="{exact: true}">
+    Malick Ndiaye
+  </a>
+  <a (click)="Score('comp')" routerLink="competences" routerLinkActive="current">
+    Compétences
+  </a>
+  <a (click)="Score('rea')" routerLink="realisations" routerLinkActive="current">Réalisations</a>
+  <a (click)="Score('exp')" routerLink="experiences" routerLinkActive="current">Expériences</a>
+  <a [routerLink]="maxedOut ? ['/contact'] : []" routerLinkActive="current" class="tooltip" [ngClass]="{'locked' : !maxedOut}">
+    Contact
+    <p class="tooltip-text border surface4" [ngClass]="{'hide' : maxedOut}">Score insuffisant</p>
+  </a>
+</div>
+
