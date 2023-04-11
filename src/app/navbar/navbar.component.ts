@@ -14,7 +14,7 @@ export class NavbarComponent implements OnInit {
   public scoredRea: boolean = false;
   public scoredExp: boolean = false;
 
-  constructor(private scoreService: ScoreService, private router: Router) { }
+  constructor(private scoreService: ScoreService) { }
 
   ngOnInit(): void {
     this.scoreService.currentScore.subscribe((value) => {
