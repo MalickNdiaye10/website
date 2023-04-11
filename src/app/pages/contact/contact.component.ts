@@ -14,7 +14,7 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
     this.scoreService.currentScore.subscribe((value) => {
       if (value < this.scoreService.max) {
-        this.router.navigate([`/`], {relativeTo: this.route});
+        this.router.navigate([``], {relativeTo: this.route});
       }
     })
   }

@@ -35,12 +35,20 @@
     div{
       align-items: center;
       display: flex;
-      gap: 16px;
+      gap: 24px;
 
       img{
-        height: 48px;
-        width: 48px;
+        height: 64px;
+        width: 64px;
       }
+    }
+  }
+
+  &.single{
+    justify-content: center;
+
+    .list{
+      width: fit-content;
     }
   }
 }
