@@ -1,7 +1,7 @@
 @media (min-width: 960px) {
   html {
     background-attachment: fixed;
-    background-image: url("../../assets/background_desktop.webp");
+    background-image: url("assets/backgrounds/background_desktop.webp");
     background-size: cover; }
     html body app-root > :not(app-navbar, app-score, router-outlet) {
       gap: 64px;
@@ -10,13 +10,15 @@
 @media (max-width: 600px) {
   html {
     background-size: cover;
-    background-image: url("../../assets/background_mobile.webp"); } }
+    background-image: url("assets/backgrounds/background_mobile.webp"); } }
 .bg-blur {
   backdrop-filter: blur(12px); }
 
 .border {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px; }
+  .border img {
+    border: transparent; }
 
 .surface2 {
   background-color: rgba(23, 28, 28, 0.5); }
@@ -88,6 +90,8 @@ html {
 .border {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px; }
+  .border img {
+    border: transparent; }
 
 .surface2 {
   background-color: rgba(23, 28, 28, 0.5); }
@@ -144,6 +148,7 @@ app-score {
       width: 64px; }
 
 .card {
+  align-items: center;
   display: flex;
   gap: 32px;
   padding: 32px; }
@@ -166,16 +171,19 @@ app-score {
     display: flex;
     flex-direction: column;
     gap: 32px;
-    padding: 32px; }
-    .list-container .list.full-width {
-      width: 100%; }
+    padding: 32px;
+    width: 100%; }
     .list-container .list div {
       align-items: center;
       display: flex;
-      gap: 16px; }
+      gap: 24px; }
       .list-container .list div img {
-        height: 48px;
-        width: 48px; }
+        height: 64px;
+        width: 64px; }
+  .list-container.single {
+    justify-content: center; }
+    .list-container.single .list {
+      width: fit-content; }
 
 html {
   display: flex;
