@@ -1,16 +1,16 @@
 @media (min-width: 960px) {
   html {
     background-attachment: fixed;
-    background-image: url("assets/backgrounds/background_desktop.webp");
+    background-image: url("../../assets/backgrounds/background_desktop.webp");
     background-size: cover; }
-    html body app-root > :not(app-navbar, app-score, router-outlet) {
+    html body app-root > :not(app-navbar, router-outlet) {
       gap: 64px;
       padding-block: 64px;
       width: 896px; } }
 @media (max-width: 600px) {
   html {
     background-size: cover;
-    background-image: url("assets/backgrounds/background_mobile.webp"); } }
+    background-image: url("../../assets/backgrounds/background_mobile.webp"); } }
 .bg-blur {
   backdrop-filter: blur(12px); }
 
@@ -34,7 +34,8 @@ html {
   font-size: 62.5%; }
   html a, html p {
     color: #e3e8e8;
-    font-size: 1.6em; }
+    font-size: 1.6em;
+    line-height: 1.4em; }
   html h2, html .h2 {
     font-size: 1.92em; }
   html h1, html .h1 {
@@ -121,28 +122,28 @@ app-navbar {
     justify-content: space-evenly;
     padding-inline: 128px; }
 
-app-score {
+#score {
   display: flex;
   padding: 0;
   top: 52px;
   width: 100%; }
-  app-score > div {
+  #score > div {
     border-bottom: 0 !important;
     border-left: 0 !important;
     border-top: 0 !important;
     display: flex;
     flex-direction: column;
     width: 256px; }
-    app-score > div #score-texts {
+    #score > div #score-texts {
       display: flex;
       gap: 8px;
       justify-content: center;
       padding-block: 10px; }
-    app-score > div #score-bg, app-score > div #score-bar {
+    #score > div #score-bg, #score > div #score-bar {
       height: 8px; }
-    app-score > div #score-bg {
+    #score > div #score-bg {
       background-color: #e3e8e8; }
-    app-score > div #score-bar {
+    #score > div #score-bar {
       background-color: #00cccc;
       transition: 0.5s linear;
       width: 64px; }
@@ -178,8 +179,8 @@ app-score {
       display: flex;
       gap: 24px; }
       .list-container .list div img {
-        height: 64px;
-        width: 64px; }
+        height: 96px;
+        width: 96px; }
   .list-container.single {
     justify-content: center; }
     .list-container.single .list {

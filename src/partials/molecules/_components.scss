@@ -13,30 +13,33 @@ app-navbar{
   border-left: 0 !important;
   border-right: 0 !important;
   border-top: 0 !important;
-  padding-block: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 16px;
   top: 0;
   width: 100%;
 
-  & > div{
+  #menu, #score{
     display: flex;
     justify-content: space-evenly;
-    padding-inline: 128px;
   }
-}
 
-app-score{
-  display: flex;
-  padding: 0;
-  top: 52px;
-  width: 100%;
+  #menu{
+    padding-inline: 128px;
 
-  & > div{
+    a{
+      text-align: center;
+      width: 128px;
+    }
+  }
+
+  #score{
     border-bottom: 0 !important;
     border-left: 0 !important;
     border-top: 0 !important;
     display: flex;
     flex-direction: column;
-    width: 256px;
 
     #score-texts{
       display: flex;

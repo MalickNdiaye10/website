@@ -1,4 +1,4 @@
-<div>
+<div id="menu">
   <a routerLink="" routerLinkActive="current" [routerLinkActiveOptions]="{exact: true}">
     Malick Ndiaye
   </a>
@@ -11,5 +11,14 @@
     Contact
     <p class="tooltip-text border surface4" [ngClass]="{'hide' : maxedOut}">Score insuffisant</p>
   </a>
+</div>
+<div id="score">
+  <div id="score-texts">
+    <p>Score: </p>
+    <p>{{currentScore}} / {{maxScore}}</p>
+  </div>
+  <div id="score-bg">
+    <div [ngClass]="{'full' : currentScore == maxScore}" id="score-bar"></div>
+  </div>
 </div>
 

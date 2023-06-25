@@ -6,7 +6,7 @@
 
     body{
       app-root{
-        &>:not(app-navbar, app-score, router-outlet) {
+        &>:not(app-navbar, router-outlet) {
           gap: 64px;
           padding-block: 64px;
           width: 896px;
