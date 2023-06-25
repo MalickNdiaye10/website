@@ -8,25 +8,40 @@
       padding-block: 64px;
       width: 896px; }
     html body app-root app-navbar #menu > img {
-      display: none; } }
-@media (max-width: 600px) {
+      display: none; }
+    html body app-root .card {
+      flex-direction: row; }
+      html body app-root .card.reverse {
+        flex-direction: row-reverse; }
+    html body app-root .list-container {
+      flex-direction: row; }
+      html body app-root .list-container .list {
+        width: 100%; } }
+@media (max-width: 960px) {
   html {
     background-size: cover;
     background-image: url("../../assets/backgrounds/background_mobile.webp"); }
-    html app-navbar #menu {
+    html body app-root > * {
+      width: 100%; }
+    html body app-root > :not(app-navbar, router-outlet) {
+      gap: 32px;
+      padding-block: 32px; }
+    html body app-root app-navbar #menu {
       padding-inline: 16px;
       display: flex;
       justify-content: space-between;
       align-items: center; }
-      html app-navbar #menu > a:is(.current) {
+      html body app-root app-navbar #menu > a:is(.current) {
         text-align: unset; }
-      html app-navbar #menu > a:not(.current) {
+      html body app-root app-navbar #menu > a:not(.current) {
         display: none; }
-      html app-navbar #menu > img {
+      html body app-root app-navbar #menu > img {
         height: 44px;
         width: 44px; }
-    html app-home {
-      display: none; } }
+    html body app-root .card {
+      flex-direction: column; }
+    html body app-root .list-container {
+      flex-direction: column; } }
 .bg-blur {
   backdrop-filter: blur(12px); }
 
@@ -169,8 +184,6 @@ app-navbar {
   display: flex;
   gap: 32px;
   padding: 32px; }
-  .card.reverse {
-    flex-direction: row-reverse; }
   .card img {
     height: 192px;
     width: 192px; }
@@ -188,8 +201,7 @@ app-navbar {
     display: flex;
     flex-direction: column;
     gap: 32px;
-    padding: 32px;
-    width: 100%; }
+    padding: 32px; }
     .list-container .list div {
       align-items: center;
       display: flex;
@@ -217,10 +229,7 @@ html {
       flex-direction: column; }
       html body app-root > :not(app-navbar, router-outlet) {
         display: flex;
-        flex-direction: column;
-        gap: 64px;
-        padding-block: 64px;
-        width: 896px; }
+        flex-direction: column; }
       html body app-root .hide {
         display: none; }
 

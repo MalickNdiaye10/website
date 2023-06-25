@@ -19,6 +19,22 @@
             }
           }
         }
+
+        .card{
+          flex-direction: row;
+
+          &.reverse{
+            flex-direction: row-reverse;
+          }
+        }
+
+        .list-container {
+          flex-direction: row;
+
+          .list {
+            width: 100%;
+          }
+        }
       }
     }
   }

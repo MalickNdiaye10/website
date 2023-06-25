@@ -3,29 +3,51 @@
     background-size: cover;
     background-image: url("../../assets/backgrounds/background_mobile.webp");
 
-    app-navbar{
-      #menu {
-        padding-inline: 16px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        & > a:is(.current){
-          text-align: unset;
+    body{
+      app-root{
+        & > *{
+          width: 100%;
         }
 
-        & > a:not(.current) {
-          display: none;
+        &>:not(app-navbar, router-outlet) {
+          gap: 32px;
+          padding-block: 32px;
         }
-        & > img{
-          height: 44px;
-          width: 44px;
+
+        app-navbar{
+          #menu {
+            padding-inline: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            & > a:is(.current){
+              text-align: unset;
+            }
+
+            & > a:not(.current) {
+              display: none;
+            }
+            & > img{
+              height: 44px;
+              width: 44px;
+            }
+          }
+        }
+
+        .card{
+          flex-direction: column;
+          margin-inline: 32px;
+        }
+
+        .list-container {
+          flex-direction: column;
+
+          .list{
+            margin-inline: 32px;
+          }
         }
       }
-    }
-
-    app-home{
-      display: none;
     }
   }
 }
