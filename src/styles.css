@@ -7,8 +7,10 @@
       gap: 64px;
       padding-block: 64px;
       width: 896px; }
-    html body app-root app-navbar #menu > img {
-      display: none; }
+    html body app-root app-navbar {
+      top: 0; }
+      html body app-root app-navbar #menu > img {
+        display: none; }
     html body app-root .card {
       flex-direction: row; }
       html body app-root .card.reverse {
@@ -26,22 +28,27 @@
     html body app-root > :not(app-navbar, router-outlet) {
       gap: 32px;
       padding-block: 32px; }
-    html body app-root app-navbar #menu {
-      padding-inline: 16px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center; }
-      html body app-root app-navbar #menu > a:is(.current) {
-        text-align: unset; }
-      html body app-root app-navbar #menu > a:not(.current) {
-        display: none; }
-      html body app-root app-navbar #menu > img {
-        height: 44px;
-        width: 44px; }
+    html body app-root app-navbar {
+      bottom: 0; }
+      html body app-root app-navbar #menu {
+        padding-inline: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        html body app-root app-navbar #menu > a:is(.current) {
+          text-align: unset; }
+        html body app-root app-navbar #menu > a:not(.current) {
+          display: none; }
+        html body app-root app-navbar #menu > img {
+          height: 44px;
+          width: 44px; }
     html body app-root .card {
-      flex-direction: column; }
+      flex-direction: column;
+      margin-inline: 32px; }
     html body app-root .list-container {
-      flex-direction: column; } }
+      flex-direction: column; }
+      html body app-root .list-container .list {
+        margin-inline: 32px; } }
 .bg-blur {
   backdrop-filter: blur(12px); }
 
@@ -137,10 +144,6 @@ html {
 app-navbar, app-score > div, #score-bg, #score-bar.full {
   border-radius: 0 0 8px 0 !important; }
 
-app-navbar, app-score {
-  position: sticky;
-  z-index: 1; }
-
 app-navbar {
   border-left: 0 !important;
   border-right: 0 !important;
@@ -149,8 +152,9 @@ app-navbar {
   flex-direction: column;
   gap: 8px;
   padding-top: 16px;
-  top: 0;
-  width: 100%; }
+  position: sticky;
+  width: 100%;
+  z-index: 1; }
   app-navbar #menu, app-navbar #score {
     display: flex;
     justify-content: space-evenly; }

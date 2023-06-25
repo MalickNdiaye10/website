@@ -4,11 +4,6 @@ app-navbar, app-score > div, #score-bg, #score-bar.full{
   border-radius: 0 0 8px 0 !important;
 }
 
-app-navbar, app-score{
-  position: sticky;
-  z-index: 1;
-}
-
 app-navbar{
   border-left: 0 !important;
   border-right: 0 !important;
@@ -17,8 +12,9 @@ app-navbar{
   flex-direction: column;
   gap: 8px;
   padding-top: 16px;
-  top: 0;
+  position: sticky;
   width: 100%;
+  z-index: 1;
 
   #menu, #score{
     display: flex;
