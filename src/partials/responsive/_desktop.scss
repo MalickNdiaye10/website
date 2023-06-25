@@ -11,6 +11,14 @@
           padding-block: 64px;
           width: 896px;
         }
+
+        app-navbar{
+          #menu{
+            & > img{
+              display: none;
+            }
+          }
+        }
       }
     }
   }

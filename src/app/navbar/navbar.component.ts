@@ -46,4 +46,8 @@ export class NavbarComponent implements OnInit {
       scoreBar.style.width = ((this.currentScore / this.maxScore) * 100) + "%";
     }
   }
+
+  toggleMenu(): void{
+    alert("TEST")
+  }
 }

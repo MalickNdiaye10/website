@@ -25,9 +25,12 @@ html{
       display: flex;
       flex-direction: column;
 
-      &>:not(app-navbar, app-score, router-outlet){
+      &>:not(app-navbar, router-outlet) {
         display: flex;
         flex-direction: column;
+        gap: 64px;
+        padding-block: 64px;
+        width: 896px;
       }
 
       .hide{

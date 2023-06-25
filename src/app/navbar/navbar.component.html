@@ -7,10 +7,11 @@
   </a>
   <a (click)="Score('rea')" routerLink="realisations" routerLinkActive="current">Réalisations</a>
   <a (click)="Score('exp')" routerLink="experiences" routerLinkActive="current">Expériences</a>
-  <a [routerLink]="maxedOut ? ['/contact'] : []" routerLinkActive="current" class="tooltip" [ngClass]="{'locked' : !maxedOut}">
+  <a [routerLink]="maxedOut ? ['/contact'] : []" class="tooltip" [ngClass]="{'locked' : !maxedOut}">
     Contact
     <p class="tooltip-text border surface4" [ngClass]="{'hide' : maxedOut}">Score insuffisant</p>
   </a>
+  <img class="border" (click)="toggleMenu()" ngSrc="assets/menu.svg" height="795" width="795" alt="Menu mobile">
 </div>
 <div id="score">
   <div id="score-texts">
@@ -21,4 +22,3 @@
     <div [ngClass]="{'full' : currentScore == maxScore}" id="score-bar"></div>
   </div>
 </div>
-

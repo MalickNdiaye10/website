@@ -6,11 +6,27 @@
     html body app-root > :not(app-navbar, router-outlet) {
       gap: 64px;
       padding-block: 64px;
-      width: 896px; } }
+      width: 896px; }
+    html body app-root app-navbar #menu > img {
+      display: none; } }
 @media (max-width: 600px) {
   html {
     background-size: cover;
-    background-image: url("../../assets/backgrounds/background_mobile.webp"); } }
+    background-image: url("../../assets/backgrounds/background_mobile.webp"); }
+    html app-navbar #menu {
+      padding-inline: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      html app-navbar #menu > a:is(.current) {
+        text-align: unset; }
+      html app-navbar #menu > a:not(.current) {
+        display: none; }
+      html app-navbar #menu > img {
+        height: 44px;
+        width: 44px; }
+    html app-home {
+      display: none; } }
 .bg-blur {
   backdrop-filter: blur(12px); }
 
@@ -114,36 +130,36 @@ app-navbar {
   border-left: 0 !important;
   border-right: 0 !important;
   border-top: 0 !important;
-  padding-block: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 16px;
   top: 0;
   width: 100%; }
-  app-navbar > div {
+  app-navbar #menu, app-navbar #score {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-evenly; }
+  app-navbar #menu {
     padding-inline: 128px; }
-
-#score {
-  display: flex;
-  padding: 0;
-  top: 52px;
-  width: 100%; }
-  #score > div {
+    app-navbar #menu a {
+      text-align: center;
+      width: 128px; }
+  app-navbar #score {
     border-bottom: 0 !important;
     border-left: 0 !important;
     border-top: 0 !important;
     display: flex;
-    flex-direction: column;
-    width: 256px; }
-    #score > div #score-texts {
+    flex-direction: column; }
+    app-navbar #score #score-texts {
       display: flex;
       gap: 8px;
       justify-content: center;
       padding-block: 10px; }
-    #score > div #score-bg, #score > div #score-bar {
+    app-navbar #score #score-bg, app-navbar #score #score-bar {
       height: 8px; }
-    #score > div #score-bg {
+    app-navbar #score #score-bg {
       background-color: #e3e8e8; }
-    #score > div #score-bar {
+    app-navbar #score #score-bar {
       background-color: #00cccc;
       transition: 0.5s linear;
       width: 64px; }
@@ -199,9 +215,12 @@ html {
       align-items: center;
       display: flex;
       flex-direction: column; }
-      html body app-root > :not(app-navbar, app-score, router-outlet) {
+      html body app-root > :not(app-navbar, router-outlet) {
         display: flex;
-        flex-direction: column; }
+        flex-direction: column;
+        gap: 64px;
+        padding-block: 64px;
+        width: 896px; }
       html body app-root .hide {
         display: none; }
 

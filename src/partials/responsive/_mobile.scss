@@ -1,6 +1,31 @@
-﻿@media (max-width: 600px) {
+﻿@media (max-width: 960px) {
   html{
     background-size: cover;
     background-image: url("../../assets/backgrounds/background_mobile.webp");
+
+    app-navbar{
+      #menu {
+        padding-inline: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & > a:is(.current){
+          text-align: unset;
+        }
+
+        & > a:not(.current) {
+          display: none;
+        }
+        & > img{
+          height: 44px;
+          width: 44px;
+        }
+      }
+    }
+
+    app-home{
+      display: none;
+    }
   }
 }
